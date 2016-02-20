@@ -7,19 +7,10 @@
   <link rel="stylesheet" href="./public/style/style.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body ng-app="todo" ng-controller="MainCtrl">
+
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bodyBlock">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <div id="banner">
-                <img src="http://placehold.it/800x200" alt="Banner Image">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div ui-view>
+      <!-- Inject views here -->
     </div>
   </div>
 
@@ -29,6 +20,6 @@
   <script src="./public/bower_components/angular/angular.js" charset="utf-8"></script>
   <script src="./public/bower_components/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
   <script src="./public/js/all.js" charset="utf-8"></script>
-  <!-- DEPENDENCIES -->
+
 </body>
 </html>
