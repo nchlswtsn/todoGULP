@@ -7,9 +7,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'public/html/home.html',
       controller: 'MainCtrl'
     })
-    .state('weather', {
-      url: '/weather',
-      templateUrl: 'public/html/weather.html',
-      controller: 'MainCtrl'
-    })
 })

@@ -3,7 +3,7 @@
   <div class="col-md-4">
     <div class="block">
       <div class="blockImage">
-        <img src="http://www.clipartbest.com/cliparts/4c9/a54/4c9a54Bdi.png" alt="Facebook Logo">
+        <a href="http://facebook.com" target="_blank"><img src="./public/images/fb.png" alt="Facebook Logo"></a>
       </div>
       <div class="blockLink">
         <p>Facebook</p>
@@ -13,7 +13,7 @@
   <div class="col-md-4">
     <div class="block middle">
       <div class="blockImage">
-        <img src="http://consorcioelectronic.com/imagenes/galeria/gmail.png" alt="Gmail Logo">
+        <a href="http://gmail.com" target="_blank"><img src="./public/images/gmail.png" alt="Gmail Logo"></a>
       </div>
       <div class="blockLink">
         <p>Gmail</p>
@@ -23,7 +23,7 @@
   <div class="col-md-4">
     <div class="block">
       <div class="blockImage">
-        <img src="https://www.seeklogo.net/wp-content/uploads/2015/09/new-google-favicon-logo.png" alt="Google Logo">
+        <a href="http://google.com" target="_blank"><img src="./public/images/google.png" alt="Google Logo"></a>
       </div>
       <div class="blockLink">
         <p>Google</p>
@@ -35,17 +35,23 @@
 <div class="row">
   <div class="col-md-12">
     <div class="weatherBar">
-      <h3>Weather Search</h3>
+      <h1>Weather Search <small ng-show="city"> - {{city}}, {{state}}</small></h1>
 
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <div class="input-group">
+
+          <form ng-submit="weatherSearch()" class="input-group">
             <span class="input-group-addon" id="basic-addon3">City, State</span>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" autofocus>
-          </div>
+            <input type="text" ng-model="cityState" class="form-control" id="basic-url" aria-describedby="basic-addon3" autofocus>
+          </form>
+
         </div>
       </div>
-
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Currently {{temp}}°f</h3>
+      </div>
+    </div>
     </div>
   </div>
 </div>
